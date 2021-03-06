@@ -5,6 +5,9 @@
   "dependencies": {
     "@testing-library/user-event": "^12.8.1",
     "bootstrap": "^4.6.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.1",
     "react-dom": "^17.0.1",
@@ -18,6 +21,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
     "clean": "rm -rf node_modules",
     "reinstall": "npm run clean && npm install"
   },
@@ -43,6 +47,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "eslint": "^7.21.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.1"
   }
