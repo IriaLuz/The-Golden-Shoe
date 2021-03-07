@@ -1,12 +1,14 @@
 import './App.css';
 import { React } from 'react';
-import Button from './components/button-example/button-example';
+import NavbarPage from './components/navbar/navbar';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button label="click me please" />
+       
+        <NavbarPage/>
       </header>
     </div>
   );
