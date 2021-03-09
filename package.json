@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
     "bootstrap": "^4.6.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.1",
     "react-dom": "^17.0.1",
@@ -17,7 +17,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:coverage": "npm test -- --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +42,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "eslint": "^7.21.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.1"
   }
 }
