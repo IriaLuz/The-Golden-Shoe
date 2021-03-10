@@ -1,7 +1,7 @@
 import React from 'react';
 import './navbar.css';
 import { Navbar, Nav } from 'react-bootstrap';
-import logo from './logoImage/Logo.png';
+import logo from './logoImage/logo2.png';
 
 const NavbarPage = () => {
   return (
