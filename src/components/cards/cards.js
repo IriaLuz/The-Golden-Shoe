@@ -9,14 +9,10 @@ import './cards.css';
 const ProductCards = () => {
   return (
     <>
-      <div>
-        <h1 className="color-text" id="center-text">
-          Some Of Our Favorites{' '}
-        </h1>
-      </div>
-      <div>
-        <hr/>
-      </div>
+      <h1 className="color-text" id="text-style">
+        Some Of Our Favorites
+      </h1>
+      <hr id="divider-style" />
       <CardDeck>
         <ProductCard
           image={Image1}
