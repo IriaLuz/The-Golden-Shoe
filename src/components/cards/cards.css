@@ -1,0 +1,15 @@
+.color-text {
+  color: black;
+}
+
+#text-style {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+#divider-style {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 5px solid #bf9000;
+}

@@ -1,8 +1,14 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import './button.css';
 
-const MyButton = ({variantValue= 'primary', content }) => {
-  return <Button data-testid= 'button' variant={variantValue}>{content}</Button>;
+const ButtonComponent = ({
+  variantValue = 'primary',
+  content,
+  customStyle
+}) => {
+  const variant = customStyle ? '' : variantValue;
+  return <Button data-testid='button' bsPrefix={customStyle} variant={variant}>{content}</Button>;
 };
 
-export default MyButton;
+export default ButtonComponent;
