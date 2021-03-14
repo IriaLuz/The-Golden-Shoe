@@ -15,29 +15,29 @@ const ProductCards = () => {
         textStyling="color-text"
         cardBody="This is a wider card with supporting text below as a natural lead-in
       to additional content. This content is a little bit longer."
-      buttonStyling="btn-gold"
-      buttonLabel="Shop Now"
+        buttonStyling="btn-gold"
+        buttonLabel="Shop Now"
         cardFooterText="Long-lasting cushioning"
       />
       <ProductCard
         image={Image2}
         title="Safety Boots"
         textStyling="color-text"
-        cardBody='This card has supporting text below as a natural lead-in to
-        additional content.'
-      buttonStyling="btn-gold"
-      buttonLabel="Shop Now"
+        cardBody="This card has supporting text below as a natural lead-in to
+        additional content."
+        buttonStyling="btn-gold"
+        buttonLabel="Shop Now"
         cardFooterText="Strong and light"
       />
       <ProductCard
         image={Image3}
         title="Tree Dasher"
         textStyling="color-text"
-        cardBody='This is a wider card with supporting text below as a natural lead-in
+        cardBody="This is a wider card with supporting text below as a natural lead-in
         to additional content. This card has even longer content than the
-        first to show that equal height action.'
-      buttonStyling="btn-gold"
-      buttonLabel="Shop Now"
+        first to show that equal height action."
+        buttonStyling="btn-gold"
+        buttonLabel="Shop Now"
         cardFooterText="Breezy Sneaker"
       />
     </CardDeck>

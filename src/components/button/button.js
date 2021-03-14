@@ -7,7 +7,8 @@ const ButtonComponent = ({
   content,
   customStyle
 }) => {
-  return <Button data-testid='button' bsPrefix={customStyle} variant={variantValue}>{content}</Button>;
+  const variant = customStyle ? '' : variantValue;
+  return <Button data-testid='button' bsPrefix={customStyle} variant={variant}>{content}</Button>;
 };
 
 export default ButtonComponent;
