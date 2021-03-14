@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
-import MyButton from '../button/button';
+import ButtonComponent from '../button/button';
 
 const ProductCard = ({image,title,textStyling,cardBody, buttonStyling, buttonLabel, cardFooterText}) => {
     return ( 
@@ -12,7 +12,7 @@ const ProductCard = ({image,title,textStyling,cardBody, buttonStyling, buttonLab
             {cardBody}
           </Card.Text>
         </Card.Body>
-        <MyButton customStyle={buttonStyling} content={buttonLabel} />
+        <ButtonComponent customStyle={buttonStyling} content={buttonLabel} />
         <Card.Footer>
           <small className="text-muted">{cardFooterText}</small>
         </Card.Footer>
