@@ -8,39 +8,49 @@ import './cards.css';
 
 const ProductCards = () => {
   return (
-    <CardDeck>
-      <ProductCard
-        image={Image1}
-        title="Pro Leather"
-        textStyling="color-text"
-        cardBody="This is a wider card with supporting text below as a natural lead-in
+    <>
+      <div>
+        <h1 className="color-text" id="center-text">
+          Some Of Our Favorites{' '}
+        </h1>
+      </div>
+      <div>
+        <hr/>
+      </div>
+      <CardDeck>
+        <ProductCard
+          image={Image1}
+          title="Pro Leather"
+          textStyling="color-text"
+          cardBody="This is a wider card with supporting text below as a natural lead-in
       to additional content. This content is a little bit longer."
-        buttonStyling="btn-gold"
-        buttonLabel="Shop Now"
-        cardFooterText="Long-lasting cushioning"
-      />
-      <ProductCard
-        image={Image2}
-        title="Safety Boots"
-        textStyling="color-text"
-        cardBody="This card has supporting text below as a natural lead-in to
+          buttonStyling="btn-gold"
+          buttonLabel="Shop Now"
+          cardFooterText="Long-lasting cushioning"
+        />
+        <ProductCard
+          image={Image2}
+          title="Safety Boots"
+          textStyling="color-text"
+          cardBody="This card has supporting text below as a natural lead-in to
         additional content."
-        buttonStyling="btn-gold"
-        buttonLabel="Shop Now"
-        cardFooterText="Strong and light"
-      />
-      <ProductCard
-        image={Image3}
-        title="Tree Dasher"
-        textStyling="color-text"
-        cardBody="This is a wider card with supporting text below as a natural lead-in
+          buttonStyling="btn-gold"
+          buttonLabel="Shop Now"
+          cardFooterText="Strong and light"
+        />
+        <ProductCard
+          image={Image3}
+          title="Tree Dasher"
+          textStyling="color-text"
+          cardBody="This is a wider card with supporting text below as a natural lead-in
         to additional content. This card has even longer content than the
         first to show that equal height action."
-        buttonStyling="btn-gold"
-        buttonLabel="Shop Now"
-        cardFooterText="Breezy Sneaker"
-      />
-    </CardDeck>
+          buttonStyling="btn-gold"
+          buttonLabel="Shop Now"
+          cardFooterText="Breezy Sneaker"
+        />
+      </CardDeck>
+    </>
   );
 };
 

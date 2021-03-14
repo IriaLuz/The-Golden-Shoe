@@ -1,4 +1,14 @@
-.color-text{
-    color:black ;
- 
+.color-text {
+  color: black;
+}
+
+#center-text {
+  text-align: center;
+}
+
+hr {
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 5px solid #bf9000;
 }
