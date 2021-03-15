@@ -5,26 +5,30 @@ import logo from './logoImage/logo2.png';
 
 const NavbarComponent = () => {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav>
-          <Nav.Link data-testid="shoplink" href="#home">
-            SHOP
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-      <Navbar.Brand data-testid="logo" className="center-navbar" href="#home">
-        <img className="logo" src={logo} alt="logo" />
-      </Navbar.Brand>
-      <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-        <Nav>
-          <Nav.Link data-testid="aboutlink" href="#home">
-            ABOUT
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <>
+      <div data-testid="logo" className="logo-container">
+        <a href="#home">
+          <img className="navbar-logo" src={logo} alt="logo" />
+        </a>
+      </div>
+      <Navbar bg="light" expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav>
+            <Nav.Link data-testid="shoplink" href="#home">
+              SHOP
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+          <Nav>
+            <Nav.Link data-testid="aboutlink" href="#home">
+              ABOUT
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </>
   );
 };
 

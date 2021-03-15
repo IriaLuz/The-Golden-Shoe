@@ -1,10 +1,11 @@
 import React from 'react';
-import logo from './images/withe-logo.png';
+import logo from './images/logo2.png';
 import './footer.css';
 
 const AppFooter = () => {
   return (
     <div className="main-footer">
+      <hr />
       <a href="/">
         <img className="logo" src={logo} alt="logo" />
       </a>
@@ -15,7 +16,9 @@ const AppFooter = () => {
             <h4>Help</h4>
             <ul className="list-unstyled">
               <li>
-                <a href="/">FQA/Cotact us</a>
+                <a className="link-footer-style" href="/">
+                  FQA/Cotact us
+                </a>
               </li>
             </ul>
           </div>
@@ -24,7 +27,9 @@ const AppFooter = () => {
             <h4>Shop</h4>
             <ul className="list-unstyled">
               <li>
-                <a href="/">Products</a>
+                <a className="link-footer-style" href="/">
+                  Products
+                </a>
               </li>
             </ul>
           </div>
