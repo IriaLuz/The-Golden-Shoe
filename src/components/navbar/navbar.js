@@ -6,8 +6,8 @@ import logo from './logoImage/logo2.png';
 const NavbarComponent = () => {
   return (
     <>
-      <div data-testid="logo" className="logo-container">
-        <a href="#home">
+      <div className="logo-container">
+        <a data-testid="logo-link" href="#home">
           <img className="navbar-logo" src={logo} alt="logo" />
         </a>
       </div>
