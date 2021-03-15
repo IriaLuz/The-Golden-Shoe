@@ -20,7 +20,7 @@ const AppFooter = () => {
             <ul className="list-unstyled">
               <li>
                 <a className="link-footer-style" href="/">
-                  FQA/Cotact us
+                  FAQ/Cotact us
                 </a>
               </li>
             </ul>
