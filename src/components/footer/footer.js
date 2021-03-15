@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './images/withe-logo.png';
+import logo from './images/white-logo.png';
 import './footer.css';
 
 const AppFooter = () => {
@@ -20,7 +20,7 @@ const AppFooter = () => {
             <ul className="list-unstyled">
               <li>
                 <a className="link-footer-style" href="/">
-                  FAQ/Cotact us
+                  FAQ/Contact us
                 </a>
               </li>
             </ul>
@@ -40,8 +40,8 @@ const AppFooter = () => {
         <hr id="divider-footer" />
         <div className="row">
           <p className="col-sm">
-            &copy;{new Date().getFullYear()} The Golden Shoe | All right
-            reserved | Term Of Service | Privacy
+            &copy;{new Date().getFullYear()} The Golden Shoe | All rights
+            reserved | Terms Of Service | Privacy
           </p>
         </div>
       </div>
