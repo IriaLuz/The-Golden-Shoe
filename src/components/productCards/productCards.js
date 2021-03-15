@@ -3,8 +3,8 @@ import { CardDeck } from 'react-bootstrap';
 import Image1 from './images/card-1-shoe-model.jpg';
 import Image2 from './images/card-2-shoe-model.jpg';
 import Image3 from './images/card-3-shoe-model.jpg';
-import ProductCard from '../card/card';
-import './cards.css';
+import './productCards.css';
+import ProductCard from '../productCard/productCard';
 
 const ProductCards = () => {
   return (
@@ -13,7 +13,7 @@ const ProductCards = () => {
         Some Of Our Favorites
       </h1>
       <hr id="divider-style" />
-      <CardDeck>
+      <CardDeck bsPrefix="cards-container card-deck">
         <ProductCard
           image={Image1}
           title="Pro Leather"

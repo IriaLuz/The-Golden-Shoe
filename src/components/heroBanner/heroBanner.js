@@ -1,6 +1,6 @@
 import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import ButtonComponent from '../button/button';
+import ButtonComponent from '../buttonComponent/buttonComponent';
 import './heroBanner.css';
 
 const HeroBanner = () => {

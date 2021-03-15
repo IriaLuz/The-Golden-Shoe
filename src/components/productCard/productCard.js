@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import ButtonComponent from '../button/button';
+import ButtonComponent from '../buttonComponent/buttonComponent';
 
 const ProductCard = ({
   image,
@@ -20,12 +20,11 @@ const ProductCard = ({
           {cardBody}
         </Card.Text>
       </Card.Body>
-      <ButtonComponent
-        customStyle={buttonStyling}
-        content={buttonLabel}
-      />
+      <ButtonComponent customStyle={buttonStyling} content={buttonLabel} />
       <Card.Footer>
-        <small data-testid='card-footer' className="text-muted">{cardFooterText}</small>
+        <small data-testid="card-footer" className="text-muted">
+          {cardFooterText}
+        </small>
       </Card.Footer>
     </Card>
   );

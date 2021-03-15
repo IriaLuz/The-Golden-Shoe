@@ -1,10 +1,18 @@
-.center-navbar {
-    width:50%;
-    margin-left: 28%;
+.logo-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 1rem;
+  width: 50%;
+  z-index: 1;
+  margin-left: 25%;
 }
 
-.logo {
-    height: 25px;
-    width: px; 
+.navbar-logo {
+  height: 1.8rem;
 }
-
+@media (max-width: 576px) {
+  .logo-container {
+    margin-left: 31%;
+  }
+}

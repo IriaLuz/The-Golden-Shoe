@@ -24,7 +24,7 @@ describe('should render navbar', () => {
   it('should render logo link', () => {
     const expectedLinkValue = '#home';
     render(<NavbarComponent />);
-    const linkElement = screen.getByTestId('logo');
+    const linkElement = screen.getByTestId('logo-link');
     expect(linkElement).toHaveAttribute('href', expectedLinkValue);
     const logo = screen.getByRole('img');
     expect(logo).toHaveAttribute('src', 'logo2.png');

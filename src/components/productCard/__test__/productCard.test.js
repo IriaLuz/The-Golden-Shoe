@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import ProductCard from '../card';
+import ProductCard from '../productCard';
 
 describe('should render ProductCard', () => {
   it('should render product image with src ="./images/card-3-shoe-model.jpg"', () => {
