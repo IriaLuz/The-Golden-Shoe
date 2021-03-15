@@ -13,7 +13,7 @@ const ProductCards = () => {
         Some Of Our Favorites
       </h1>
       <hr id="divider-style" />
-      <CardDeck>
+      <CardDeck bsPrefix="cards-container card-deck">
         <ProductCard
           image={Image1}
           title="Pro Leather"

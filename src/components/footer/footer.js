@@ -1,14 +1,17 @@
 import React from 'react';
-import logo from './images/logo2.png';
+import logo from './images/withe-logo.png';
 import './footer.css';
 
 const AppFooter = () => {
   return (
     <div className="main-footer">
       <hr />
+      <div className="footer-logo-container">
       <a href="/">
         <img className="logo" src={logo} alt="logo" />
       </a>
+      </div>
+
       <div className="container">
         <div className="row">
           {/* column1 */}
