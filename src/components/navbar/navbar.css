@@ -11,8 +11,8 @@
 .navbar-logo {
   height: 1.8rem;
 }
-@media(max-width: 576px){
-  .logo-container{
+@media (max-width: 576px) {
+  .logo-container {
     margin-left: 31%;
   }
 }

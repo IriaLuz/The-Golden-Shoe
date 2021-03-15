@@ -7,9 +7,9 @@ const AppFooter = () => {
     <div className="main-footer">
       <hr />
       <div className="footer-logo-container">
-      <a href="/">
-        <img className="logo" src={logo} alt="logo" />
-      </a>
+        <a href="/">
+          <img className="logo" src={logo} alt="logo" />
+        </a>
       </div>
 
       <div className="container">

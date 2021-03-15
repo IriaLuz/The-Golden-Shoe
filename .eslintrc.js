@@ -10,11 +10,11 @@ module.exports = {
   rules: {
     // 0=off, 1=warning, 2=error
     'prettier/prettier': 0,
-    "react/prop-types": 0,
+    'react/prop-types': 0,
     'react/jsx-filename-extension': 0,
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': 1,
-    "semi": [2, "always"]
+    semi: [2, 'always'],
   },
   env: {
     jest: true,
