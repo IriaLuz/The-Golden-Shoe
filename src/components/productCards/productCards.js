@@ -9,15 +9,13 @@ import ProductCard from '../productCard/productCard';
 const ProductCards = () => {
   return (
     <>
-      <h1 className="color-text" id="text-style">
-        Some Of Our Favorites
-      </h1>
-      <hr id="divider-style" />
+      <h1 id="text-style-cardtitle">Some Of Our Favorites</h1>
+      <hr id="divider-card-style" />
       <CardDeck bsPrefix="cards-container card-deck">
         <ProductCard
           image={Image1}
           title="Pro Leather"
-          textStyling="color-text"
+          textStyling="style-text-cardbody"
           cardBody="This is a wider card with supporting text below as a natural lead-in
       to additional content. This content is a little bit longer."
           buttonStyling="btn-gold"

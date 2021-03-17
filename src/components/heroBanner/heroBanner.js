@@ -5,10 +5,14 @@ import './heroBanner.css';
 
 const HeroBanner = () => {
   return (
-    <Jumbotron bsPrefix="jumbotron" id="background-image">
+    <Jumbotron bsPrefix="jumbotron-herobanner" id="background-image-herobanner">
       <div>
-        <h1 data-testid="headlineOffer">Up to 50% OFF in your first buy</h1>
-        <p data-testid="subheadlinesentence">Be ready for anything...</p>
+        <h1 className="text-style-herobanner" data-testid="headlineOffer">
+          Up to 50% OFF in your first buy
+        </h1>
+        <p className="text-style-herobanner" data-testid="subheadlinesentence">
+          Be ready for anything...
+        </p>
         <p>
           <ButtonComponent variantValue="light" content="Shop Now" />
         </p>

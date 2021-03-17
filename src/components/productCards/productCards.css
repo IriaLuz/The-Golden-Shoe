@@ -1,17 +1,18 @@
-.color-text {
+.style-text-cardbody {
   color: black;
 }
 
-#text-style {
+#text-style-cardtitle {
   text-align: center;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
+  color:black;
 }
 .cards-container {
   margin-left: 3rem !important;
   margin-right: 3rem !important;
 }
 
-#divider-style {
+#divider-card-style {
   margin-top: 2rem;
   margin-bottom: 1rem;
   border: 0;

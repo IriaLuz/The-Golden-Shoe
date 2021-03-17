@@ -8,7 +8,7 @@ const AppFooter = () => {
       <hr />
       <div className="footer-logo-container">
         <a href="/">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logo-footer" src={logo} alt="logo" />
         </a>
       </div>
 
@@ -16,8 +16,8 @@ const AppFooter = () => {
         <div className="row">
           {/* column1 */}
           <div className="col">
-            <h4>Help</h4>
-            <ul className="list-unstyled">
+            <ul className="list-footer">
+              <h4>Help</h4>
               <li>
                 <a className="link-footer-style" href="/">
                   FAQ/Contact us
@@ -27,8 +27,8 @@ const AppFooter = () => {
           </div>
           {/* colum2 */}
           <div className="col">
-            <h4>Shop</h4>
-            <ul className="list-unstyled">
+            <ul className="list-footer">
+              <h4>Shop</h4>
               <li>
                 <a className="link-footer-style" href="/">
                   Products

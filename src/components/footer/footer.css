@@ -16,7 +16,7 @@
   justify-content: center;
 }
 
-.logo {
+.logo-footer {
   height: 34px;
 }
 
@@ -24,8 +24,10 @@
   padding: 1rem;
   text-align: center;
 }
-.list-unstyled {
+
+.list-footer {
   font-size: 13px;
+  list-style-type: none;
 }
 
 #divider-footer {
