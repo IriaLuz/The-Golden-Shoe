@@ -7,7 +7,7 @@ describe('should render navbar', () => {
     const expectedContent = 'SHOP';
     const expectedLinkValue = '#home';
     render(<NavbarComponent />);
-    const linkElement = screen.getByTestId('shoplink');
+    const linkElement = screen.getByTestId('shoplink-navbar');
     expect(linkElement).toHaveAttribute('href', expectedLinkValue);
     expect(linkElement).toHaveTextContent(expectedContent);
   });
@@ -24,7 +24,7 @@ describe('should render navbar', () => {
   it('should render logo link', () => {
     const expectedLinkValue = '#home';
     render(<NavbarComponent />);
-    const linkElement = screen.getByTestId('logo-link');
+    const linkElement = screen.getByTestId('logo-link-navbar');
     expect(linkElement).toHaveAttribute('href', expectedLinkValue);
     const logo = screen.getByRole('img');
     expect(logo).toHaveAttribute('src', 'logo2.png');

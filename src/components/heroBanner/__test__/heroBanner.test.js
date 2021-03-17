@@ -3,14 +3,14 @@ import { render, screen } from '@testing-library/react';
 import HeroBanner from './../heroBanner';
 
 describe('should render Hero Banner', () => {
-  it('should render headline and subheadline', () => {
+  it('should render headline', () => {
     const expectedContent = 'Up to 50% OFF in your first buy';
     render(<HeroBanner />);
     const headlineElement = screen.getByTestId('headlineOffer');
     expect(headlineElement).toHaveTextContent(expectedContent);
   });
 
-  it('should render headline and subheadline', () => {
+  it('should render "subheadline"', () => {
     const expectedContent = 'Be ready for anything...';
     render(<HeroBanner />);
     const subheadlineElement = screen.getByTestId('subheadlinesentence');

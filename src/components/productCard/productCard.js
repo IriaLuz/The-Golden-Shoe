@@ -15,8 +15,8 @@ const ProductCard = ({
     <Card>
       <Card.Img data-testid="cardImg" variant="top" src={image} />
       <Card.Body>
-        <Card.Title data-testid="title"> {title}</Card.Title>
-        <Card.Text data-testid="textStyling" bsPrefix={textStyling}>
+        <Card.Title data-testid="card-title"> {title}</Card.Title>
+        <Card.Text data-testid="text-card" bsPrefix={textStyling}>
           {cardBody}
         </Card.Text>
       </Card.Body>

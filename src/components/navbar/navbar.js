@@ -7,7 +7,7 @@ const NavbarComponent = () => {
   return (
     <>
       <div className="logo-container">
-        <a data-testid="logo-link" href="#home">
+        <a data-testid="logo-link-navbar" href="#home">
           <img className="navbar-logo" src={logo} alt="logo" />
         </a>
       </div>
@@ -15,7 +15,7 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
-            <Nav.Link data-testid="shoplink" href="#home">
+            <Nav.Link data-testid="shoplink-navbar" href="#home">
               SHOP
             </Nav.Link>
           </Nav>
