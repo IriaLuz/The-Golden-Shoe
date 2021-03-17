@@ -1,8 +1,7 @@
 import './App.css';
 import { React } from 'react';
 import NavbarComponent from './components/navbar/navbar';
-import HeroBanner from './components/heroBanner/heroBanner';
-import ProductCards from './components/productCards/productCards';
+import HomePage from './pages/homePage/homepage';
 import AppFooter from './components/footer/footer';
 
 function App() {
@@ -13,11 +12,10 @@ function App() {
           <NavbarComponent />
         </header>
         <main>
-          <HeroBanner />
-          <ProductCards />
+          <HomePage/>
         </main>
       </div>
-      <AppFooter />
+      <AppFooter/>
     </div>
   );
 }
