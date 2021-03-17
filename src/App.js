@@ -1,5 +1,7 @@
 import './App.css';
 import { React } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import ProductPage from './pages/productPage/productPage';
 import NavbarComponent from './components/navbar/navbar';
 import HomePage from './pages/homePage/homepage';
 import AppFooter from './components/footer/footer';
@@ -12,10 +14,13 @@ function App() {
           <NavbarComponent />
         </header>
         <main>
-          <HomePage/>
+          <Switch>
+            <Route exact path="/products" component={ProductPage} />
+            <Route exact path="/" component={HomePage} />
+          </Switch>
         </main>
       </div>
-      <AppFooter/>
+      <AppFooter />
     </div>
   );
 }

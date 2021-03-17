@@ -1,0 +1,8 @@
+.btn-shoe-size{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5rem;
+    border-radius: 0;
+}
+
