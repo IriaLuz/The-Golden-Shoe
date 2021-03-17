@@ -5,7 +5,7 @@ import './heroBanner.css';
 
 const HeroBanner = () => {
   return (
-    <Jumbotron bsPrefix="jumbotron-herobanner" id="background-image-herobanner">
+    <Jumbotron bsPrefix="jumbotron" id="background-image-herobanner">
       <div>
         <h1 className="text-style-herobanner" data-testid="headlineOffer">
           Up to 50% OFF in your first buy

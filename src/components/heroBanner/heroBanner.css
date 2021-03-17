@@ -11,7 +11,7 @@
   background-color: rgb(102 92 83 / 50%);
 }
 
-.jumbotron-herobanner {
+.jumbotron {
   height: 38rem;
   display: flex;
   justify-content: flex-end;
