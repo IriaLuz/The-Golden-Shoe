@@ -18,7 +18,7 @@ const ProductCards = () => {
           textStyling="style-text-cardbody"
           cardBody="This is a wider card with supporting text below as a natural lead-in
       to additional content. This content is a little bit longer."
-          buttonStyling="btn-gold"
+          buttonStyling="btn-card"
           buttonLabel="Shop Now"
           cardFooterText="Long-lasting cushioning"
         />
@@ -28,7 +28,7 @@ const ProductCards = () => {
           textStyling="color-text"
           cardBody="This card has supporting text below as a natural lead-in to
         additional content."
-          buttonStyling="btn-gold"
+          buttonStyling="btn-card"
           buttonLabel="Shop Now"
           cardFooterText="Strong and light"
         />
@@ -39,7 +39,7 @@ const ProductCards = () => {
           cardBody="This is a wider card with supporting text below as a natural lead-in
         to additional content. This card has even longer content than the
         first to show that equal height action."
-          buttonStyling="btn-gold"
+          buttonStyling="btn-card"
           buttonLabel="Shop Now"
           cardFooterText="Breezy Sneaker"
         />

@@ -1,6 +1,17 @@
-.btn-gold {
+.btn-card {
   color: #fff;
   background-color: #bf9000;
   border-color: #bf900000;
   border-radius: 0.25rem;
+}
+
+.btn-product {
+  color: #fff;
+  background-color: #bf9000;
+  border-color: #bf900000;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  margin-bottom:1rem;
+  width: 50%;
+  margin-left: 2rem;
 }
