@@ -21,3 +21,10 @@
   margin-right: 3rem;
 }
 
+.btn-card {
+  color: #fff;
+  background-color: #bf9000;
+  border-color: #bf900000;
+  border-radius: 0.25rem;
+}
+

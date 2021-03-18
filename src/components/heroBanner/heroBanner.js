@@ -14,7 +14,7 @@ const HeroBanner = () => {
           Be ready for anything...
         </p>
         <p>
-          <ButtonComponent variantValue="light" content="Shop Now" />
+          <ButtonComponent customStyle='btn-herobanner' content="Shop Now" />
         </p>
       </div>
     </Jumbotron>

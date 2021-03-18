@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonComponent from '../../components/buttonComponent/buttonComponent';
 import CustomAccordion from '../../components/customAccordion/customAccordion';
+import CustomModal from '../customModal/customModal';
 // import CustomCarousel from '../../components/customCarousel/customCarousel';
 import image1 from './images/card-1-shoe-model.jpg';
 import './productPage.css';
@@ -17,6 +18,7 @@ const ProductPage = () => {
           content="uk"
           subContent="3"
         />
+      <CustomModal/>
       </div>
       <div>
         <h3 className="title-button-product">SELECT COLOR:</h3>

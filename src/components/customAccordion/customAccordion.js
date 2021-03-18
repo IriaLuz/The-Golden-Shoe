@@ -2,6 +2,8 @@ import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
+import './customAccordion.css';
+
 
 const CustomAccordion = ({
   accordionBtnTitle,
@@ -14,7 +16,7 @@ const CustomAccordion = ({
       <Accordion >
         <Card >
           <Card.Header bsPrefix='card'  >
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
+            <Accordion.Toggle as={Button} className='btn-accordion' variant="link" eventKey="0">
               {accordionBtnTitle}
             </Accordion.Toggle>
           </Card.Header>
@@ -24,7 +26,7 @@ const CustomAccordion = ({
         </Card >
         <Card> 
           <Card.Header bsPrefix='card' >
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
+            <Accordion.Toggle as={Button} className='btn-accordion' variant="link" eventKey="1">
               {accordionBtnListTitle}
             </Accordion.Toggle>
           </Card.Header>

@@ -20,5 +20,12 @@
 
 .text-style-herobanner {
   font-style: italic;
-  color: honeydew;
+  color:honeydew;
+}
+
+.btn-herobanner{
+  color:black;
+  border-radius: 0.30rem;
+  background-color: white;
+  border-color:white;
 }

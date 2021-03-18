@@ -1,3 +1,8 @@
-.card {
-  width: 50%;
-  }
+.btn-accordion {
+  color: black;
+  box-shadow: none;
+  text-decoration: none;
+  border-radius: none;
+  border-left: none;
+  border-right: none;
+}
