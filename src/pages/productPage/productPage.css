@@ -1,46 +1,37 @@
-.btn-shoe-size{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 5rem;
-    border-radius: 0;     
+.btn-shoe-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5rem;
+  border-radius: 0;
 }
 
-.btn-shoe-color{
-    width: 40px;
-    height: 40px;
-    margin: 0px auto;
-    border-radius: 50%;
-    background: rgb(19, 87, 155);
-    position: relative;
-    display: inline-block;
-    border: 1px solid rgb(211, 212, 213);
+.btn-shoe-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(19, 87, 155);
+  border: 1px solid rgb(211, 212, 213);
 }
 
-.title-button-product{
-    font-size: 12px;
+.title-button-product {
+  font-size: 12px;
 }
 
-.product-img{
-    width:450px;
-    float:left;
-    margin-right:2rem;
-    margin-left:2rem;
-    margin-top: 1rem;
-}
-
-.product-title{
-    margin-left: 2rem;
+.product-img {
+  width: 250px;
+  padding-bottom: 1rem;
 }
 
 .btn-product {
-    color: #fff;
-    background-color: #bf9000;
-    border-color: #bf900000;
-    border-radius: 0.25rem;
-    margin-top: 1rem;
-    margin-bottom:1rem;
-    width: 50%;
-    margin-left: 2rem;
-  }
+  color: #fff;
+  background-color: #bf9000;
+  border-color: #bf900000;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  margin-left: 2rem;
+}
+
 
