@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import ButtonComponent from '../buttonComponent/buttonComponent';
 
 const ProductCard = ({
@@ -10,6 +11,7 @@ const ProductCard = ({
   buttonStyling,
   buttonLabel,
   cardFooterText,
+  buttonLink,
 }) => {
   return (
     <Card>
@@ -20,7 +22,9 @@ const ProductCard = ({
           {cardBody}
         </Card.Text>
       </Card.Body>
-      <ButtonComponent customStyle={buttonStyling} content={buttonLabel} />
+      <Link to={buttonLink}>
+        <ButtonComponent customStyle={buttonStyling} content={buttonLabel} />
+      </Link>
       <Card.Footer>
         <small data-testid="card-footer" className="text-muted">
           {cardFooterText}

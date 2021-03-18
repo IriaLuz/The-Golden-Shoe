@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.btn {
+.modal-btn {
   color: black;
   box-shadow: none;
   text-decoration: underline;
@@ -10,8 +10,8 @@
   padding: 0rem;
 }
 
-.btn:focus,
-.btn.focus {
+.modal-btn:focus,
+.modal-btn.focus {
   outline: 0;
   box-shadow: 0 0 0;
 }

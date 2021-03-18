@@ -5,7 +5,7 @@
 #text-style-cardtitle {
   text-align: center;
   padding-top: 1rem;
-  color:black;
+  color: black;
 }
 .cards-container {
   margin-left: 3rem !important;
@@ -22,9 +22,9 @@
 }
 
 .btn-card {
+  width: 100%;
   color: #fff;
   background-color: #bf9000;
   border-color: #bf900000;
   border-radius: 0.25rem;
 }
-

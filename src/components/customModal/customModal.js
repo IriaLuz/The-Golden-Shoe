@@ -12,7 +12,7 @@ const CustomModal = () => {
 
   return (
     <>
-      <Button bsPrefix="btn" variant="link" onClick={handleShow}>
+      <Button className="modal-btn" variant="link" onClick={handleShow}>
         See Size Chart
       </Button>
 

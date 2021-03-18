@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import logo from './logoImage/logo2.png';
@@ -7,9 +8,9 @@ const NavbarComponent = () => {
   return (
     <>
       <div className="logo-container">
-        <a data-testid="logo-link-navbar" href="#home">
+        <Link data-testid="logo-link-navbar" to="/">
           <img className="navbar-logo" src={logo} alt="logo" />
-        </a>
+        </Link>
       </div>
       <Navbar bg="light" expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
