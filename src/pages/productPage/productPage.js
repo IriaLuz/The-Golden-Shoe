@@ -1,16 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ButtonComponent from '../../components/buttonComponent/buttonComponent';
 import CustomAccordion from '../../components/customAccordion/customAccordion';
 import CustomModal from '../../components/customModal/customModal';
-// import image1 from './images/card-1-shoe-model.jpg';
 import CustomCarousel from '../../components/customCarousel/customCarousel';
 import './productPage.css';
 
 const ProductPage = (props) => {
-const productId = props.match.params.id;
+  const productId = props.match.params.id;
 
   console.log(productId);
   const images = [
@@ -36,9 +36,6 @@ const productId = props.match.params.id;
       <Container>
         <Row>
           <Col className="mr-2">
-            {/* <Col>
-              <img className="product-img" src={image1} alt="shoe1" />
-            </Col> */}
             <Col>
               <CustomCarousel images={images} />
             </Col>
@@ -117,11 +114,13 @@ const productId = props.match.params.id;
             </Row>
             <Row>
               <Col>
-                <ButtonComponent
-                  className="button-cart"
-                  customStyle="btn-product"
-                  content="ADD TO CART"
-                />
+                <Link to="/cart">
+                  <ButtonComponent
+                    className="button-cart"
+                    customStyle="btn-product"
+                    content="ADD TO CART"
+                  />
+                </Link>
               </Col>
             </Row>
 

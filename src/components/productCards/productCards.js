@@ -21,7 +21,7 @@ const ProductCards = () => {
           buttonStyling="btn-card"
           buttonLabel="Shop Now"
           cardFooterText="Long-lasting cushioning"
-          buttonLink='/products/1'
+          buttonLink="/products/1"
         />
         <ProductCard
           image={Image2}
@@ -32,7 +32,7 @@ const ProductCards = () => {
           buttonStyling="btn-card"
           buttonLabel="Shop Now"
           cardFooterText="Strong and light"
-          buttonLink='/products/2'
+          buttonLink="/products/2"
         />
         <ProductCard
           image={Image3}
@@ -44,7 +44,7 @@ const ProductCards = () => {
           buttonStyling="btn-card"
           buttonLabel="Shop Now"
           cardFooterText="Breezy Sneaker"
-          buttonLink='/products/3'
+          buttonLink="/products/3"
         />
       </CardDeck>
     </>

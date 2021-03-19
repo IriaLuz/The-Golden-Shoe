@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import ButtonComponent from '../buttonComponent/buttonComponent';
 import './heroBanner.css';
@@ -13,9 +14,12 @@ const HeroBanner = () => {
         <p className="text-style-herobanner" data-testid="subheadlinesentence">
           Be ready for anything...
         </p>
-        <p>
+        <Link to='/products'>
+          <p>
           <ButtonComponent variantValue='light' content="Shop Now" />
         </p>
+        </Link>
+        
       </div>
     </Jumbotron>
   );

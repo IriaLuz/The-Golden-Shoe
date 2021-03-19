@@ -16,14 +16,14 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
-            <Nav.Link data-testid="shoplink-navbar" href="#home">
+            <Nav.Link data-testid="shoplink-navbar" href="/products">
               SHOP
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link data-testid="aboutlink" href="#home">
+            <Nav.Link data-testid="aboutlink" href="/about">
               ABOUT
             </Nav.Link>
           </Nav>
