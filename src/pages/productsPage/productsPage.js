@@ -3,11 +3,9 @@ import './productsPage.css';
 
 const ProductsPage = () => {
   return (
-  <>
-  <h1>Products Page</h1>;
-
-  </>
-
+    <>
+      <h1>Products Page</h1>;
+    </>
   );
 };
 

@@ -14,12 +14,11 @@ const HeroBanner = () => {
         <p className="text-style-herobanner" data-testid="subheadlinesentence">
           Be ready for anything...
         </p>
-        <Link to='/products'>
+        <Link to="/products">
           <p>
-          <ButtonComponent variantValue='light' content="Shop Now" />
-        </p>
+            <ButtonComponent variantValue="light" content="Shop Now" />
+          </p>
         </Link>
-        
       </div>
     </Jumbotron>
   );

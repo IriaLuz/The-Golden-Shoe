@@ -7,13 +7,18 @@ const ButtonComponent = ({
   content,
   subContent,
   customStyle,
-  onClick
+  onClick,
 }) => {
   const variant = customStyle ? '' : variantValue;
   return (
-    <Button data-testid="button" bsPrefix={customStyle} variant={variant} onClick={onClick}>
-      { content && <span>{content}</span> }
-      { subContent && <span>{subContent}</span> }
+    <Button
+      data-testid="button"
+      bsPrefix={customStyle}
+      variant={variant}
+      onClick={onClick}
+    >
+      {content && <span>{content}</span>}
+      {subContent && <span>{subContent}</span>}
     </Button>
   );
 };
