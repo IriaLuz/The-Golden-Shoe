@@ -12,38 +12,18 @@ import { getShoe } from '../../services/fakeShoeService';
 
 const ProductPage = (props) => {
   const productId = props.match.params.id;
-
   const productData = getShoe(productId);
-  console.log(productData);
+  const [selectedShoe, setSelectedShoe] = useState(productData.inventory[0]);
 
-  console.log(productId);
-  // const [selectedColor, setSelectedColor]= useState(productData.inventory[0]);
-
-  const images = [
-    {
-      src:
-        'https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/TD1MECL080_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHER_ECLIPSE_BLACK_d1f73107-6102-48b9-9a61-56664e9418f7.png?v=1601053802',
-      alt: 'black shoe',
-    },
-    {
-      src:
-        'https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/Mens_TR-PDP_Image_6a1b9edc-9926-4719-9d05-93c50cc64dfe.jpg?v=1614723172',
-      alt: 'person with shoes',
-    },
-    {
-      src:
-        'https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/Men_s_Tree_Runners_-_Charcoal__Charcoal_Sole__-_imageLeft_052bf309-4064-450f-af51-bd9f3399ceb5.png?v=1614723172',
-      alt: 'shoe on the side',
-    },
-  ];
-
-  const [testVariable, setTestVariable] = useState('te amo');
+  const handleColorSelection = (selectedShoeId) => {
+    const newSelectedShoe = productData.inventory.find(
+      (shoeColor) => shoeColor.id === selectedShoeId,
+    );
+    setSelectedShoe(newSelectedShoe);
+  };
 
   const handleAddToCart = () => {
-    console.log('antes', testVariable);
-    const newTestVariable = `${testVariable} Iria`;
-    setTestVariable(newTestVariable);
-    console.log('despues ', testVariable);
+    console.log('item added to cart');
   };
 
   return (
@@ -52,7 +32,7 @@ const ProductPage = (props) => {
         <Row>
           <Col className="mr-2">
             <Col>
-              <CustomCarousel images={images} />
+              <CustomCarousel images={selectedShoe.images} />
             </Col>
           </Col>
           <Col xs={6}>
@@ -69,41 +49,19 @@ const ProductPage = (props) => {
             </Row>
 
             <Row>
-              <Col>
-                <ButtonComponent
-                  customStyle="btn-shoe-size"
-                  content="uk"
-                  subContent="3"
-                />
-              </Col>
-              <Col>
-                <ButtonComponent
-                  customStyle="btn-shoe-size"
-                  content="uk"
-                  subContent="3"
-                />
-              </Col>
-              <Col>
-                <ButtonComponent
-                  customStyle="btn-shoe-size"
-                  content="uk"
-                  subContent="3"
-                />
-              </Col>
-              <Col>
-                <ButtonComponent
-                  customStyle="btn-shoe-size"
-                  content="uk"
-                  subContent="3"
-                />
-              </Col>
-              <Col>
-                <ButtonComponent
-                  customStyle="btn-shoe-size"
-                  content="uk"
-                  subContent="3"
-                />
-              </Col>
+              {selectedShoe.sizes.map((size) => (
+                <Col>
+                  <ButtonComponent
+                    customStyle={
+                      size.stock === 0
+                        ? 'btn-shoe-size btn-shoe-size-no-stock'
+                        : 'btn-shoe-size'
+                    }
+                    content={size.format}
+                    subContent={size.size}
+                  />
+                </Col>
+              ))}
             </Row>
             <Row>
               <Col className="text-left">
@@ -120,6 +78,7 @@ const ProductPage = (props) => {
                 <Col key={shoe.id} className="flex-grow-0">
                   <ButtonComponent
                     customStyle={`btn-shoe-color shoe-color-${shoe.colorCode}`}
+                    onClick={() => handleColorSelection(shoe.id)}
                   />
                 </Col>
               ))}

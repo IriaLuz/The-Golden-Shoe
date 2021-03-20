@@ -6,6 +6,11 @@
   border-radius: 0;
 }
 
+.btn-shoe-size-no-stock {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M100 0 L0 100 ' stroke='%23212a2f' stroke-width='1' /></svg>")
+    center center no-repeat;
+}
+
 .btn-shoe-color {
   width: 40px;
   height: 40px;
