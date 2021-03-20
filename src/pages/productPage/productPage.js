@@ -14,6 +14,13 @@ const ProductPage = (props) => {
   const productId = props.match.params.id;
   const productData = getShoe(productId);
   const [selectedShoe, setSelectedShoe] = useState(productData.inventory[0]);
+  const [selectedSize, setSelectedSize] = useState({});
+
+  const handleSelectedSize = (newSize) => {
+    const newSizeSelected = newSize.size === selectedSize.size ? {} : newSize;
+    setSelectedSize(newSizeSelected);
+    console.log(newSizeSelected);
+  };
 
   const handleColorSelection = (selectedShoeId) => {
     const newSelectedShoe = productData.inventory.find(
@@ -26,6 +33,10 @@ const ProductPage = (props) => {
     console.log('item added to cart');
   };
 
+  const addToCartMessage =
+    selectedSize.stock === 0
+      ? 'SIZE SOLD OUT'
+      : `ADD TO CART - £${productData.price}`;
   return (
     <>
       <Container>
@@ -44,32 +55,6 @@ const ProductPage = (props) => {
             </Row>
             <Row>
               <Col className="text-left">
-                <h3 className="title-button-product">SELECT SIZE:</h3>
-              </Col>
-            </Row>
-
-            <Row>
-              {selectedShoe.sizes.map((size) => (
-                <Col>
-                  <ButtonComponent
-                    customStyle={
-                      size.stock === 0
-                        ? 'btn-shoe-size btn-shoe-size-no-stock'
-                        : 'btn-shoe-size'
-                    }
-                    content={size.format}
-                    subContent={size.size}
-                  />
-                </Col>
-              ))}
-            </Row>
-            <Row>
-              <Col className="text-left">
-                <CustomModal />
-              </Col>
-            </Row>
-            <Row>
-              <Col className="text-left">
                 <h3 className="title-button-product">SELECT COLOR:</h3>
               </Col>
             </Row>
@@ -84,19 +69,47 @@ const ProductPage = (props) => {
               ))}
             </Row>
             <Row>
+              <Col className="text-left">
+                <h3 className="title-button-product">SELECT SIZE:</h3>
+              </Col>
+            </Row>
+
+            <Row>
+              {selectedShoe.sizes.map((size) => (
+                <Col className="flex-grow-0">
+                  <ButtonComponent
+                    customStyle={
+                      size.stock === 0
+                        ? 'btn-shoe-size btn-shoe-size-no-stock'
+                        : 'btn-shoe-size'
+                    }
+                    content={size.format}
+                    subContent={size.size}
+                    onClick={() => handleSelectedSize(size)}
+                  />
+                </Col>
+              ))}
+            </Row>
+            <Row>
+              <Col className="text-left">
+                <CustomModal />
+              </Col>
+            </Row>
+
+            <Row>
               <Col>
                 {/* <Link to="/cart"> */}
                 <ButtonComponent
                   className="button-cart"
                   customStyle="btn-product"
-                  content="ADD TO CART"
+                  content={selectedSize.size ? addToCartMessage : 'SELECT SIZE'}
                   onClick={handleAddToCart}
                 />
                 {/* </Link> */}
               </Col>
             </Row>
 
-            <Col>
+            <Col className="p-0">
               <CustomAccordion
                 className="accordion-style"
                 accordionBtnTitle="Description"

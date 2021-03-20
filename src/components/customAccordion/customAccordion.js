@@ -11,10 +11,10 @@ const CustomAccordion = ({
   accordionBtnListItems,
 }) => {
   return (
-    <div>
+    <>
       <Accordion>
         <Card>
-          <Card.Header bsPrefix="card">
+          <Card.Header className='accordion-card-header'>
             <Accordion.Toggle
               as={Button}
               className="btn-accordion"
@@ -25,11 +25,11 @@ const CustomAccordion = ({
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>{accordionBTnBody}</Card.Body>
+            <Card.Body className="text-left">{accordionBTnBody}</Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
-          <Card.Header bsPrefix="card">
+          <Card.Header className='accordion-card-header'>
             <Accordion.Toggle
               as={Button}
               className="btn-accordion"
@@ -40,7 +40,7 @@ const CustomAccordion = ({
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="1">
-            <Card.Body>
+            <Card.Body  className="text-left">
               <ul>
               {accordionBtnListItems.map(item =>(
                 <li key={item.id}>{item.description}</li>
@@ -51,7 +51,7 @@ const CustomAccordion = ({
           </Accordion.Collapse>
         </Card>
       </Accordion>
-    </div>
+    </>
   );
 };
 
