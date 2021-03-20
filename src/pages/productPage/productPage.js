@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,11 +8,17 @@ import CustomAccordion from '../../components/customAccordion/customAccordion';
 import CustomModal from '../../components/customModal/customModal';
 import CustomCarousel from '../../components/customCarousel/customCarousel';
 import './productPage.css';
+import { getShoe } from '../../services/fakeShoeService';
 
 const ProductPage = (props) => {
   const productId = props.match.params.id;
 
+  const productData = getShoe(productId);
+  console.log(productData);
+
   console.log(productId);
+  // const [selectedColor, setSelectedColor]= useState(productData.inventory[0]);
+
   const images = [
     {
       src:
@@ -31,6 +37,15 @@ const ProductPage = (props) => {
     },
   ];
 
+  const [testVariable, setTestVariable] = useState('te amo');
+
+  const handleAddToCart = () => {
+    console.log('antes', testVariable);
+    const newTestVariable = `${testVariable} Iria`;
+    setTestVariable(newTestVariable);
+    console.log('despues ', testVariable);
+  };
+
   return (
     <>
       <Container>
@@ -42,12 +57,15 @@ const ProductPage = (props) => {
           </Col>
           <Col xs={6}>
             <Row>
-              <Col className="text-start">
-                <h2>Product Name</h2>
+              <Col className="text-left">
+                <h2>{productData.name}</h2>
+                <div>£{productData.price}</div>
               </Col>
             </Row>
             <Row>
-              <h3 className="title-button-product">SELECT SIZE:</h3>
+              <Col className="text-left">
+                <h3 className="title-button-product">SELECT SIZE:</h3>
+              </Col>
             </Row>
 
             <Row>
@@ -88,39 +106,34 @@ const ProductPage = (props) => {
               </Col>
             </Row>
             <Row>
-              <Col>
+              <Col className="text-left">
                 <CustomModal />
               </Col>
             </Row>
             <Row>
-              <h3 className="title-button-product">SELECT COLOR:</h3>
-            </Row>
-            <Row>
-              <Col>
-                <ButtonComponent customStyle="btn-shoe-color" />
-              </Col>
-              <Col>
-                <ButtonComponent customStyle="btn-shoe-color" />
-              </Col>
-              <Col>
-                <ButtonComponent customStyle="btn-shoe-color" />
-              </Col>
-              <Col>
-                <ButtonComponent customStyle="btn-shoe-color" />
-              </Col>
-              <Col>
-                <ButtonComponent customStyle="btn-shoe-color" />
+              <Col className="text-left">
+                <h3 className="title-button-product">SELECT COLOR:</h3>
               </Col>
             </Row>
             <Row>
-              <Col>
-                <Link to="/cart">
+              {productData.inventory.map((shoe) => (
+                <Col key={shoe.id} className="flex-grow-0">
                   <ButtonComponent
-                    className="button-cart"
-                    customStyle="btn-product"
-                    content="ADD TO CART"
+                    customStyle={`btn-shoe-color shoe-color-${shoe.colorCode}`}
                   />
-                </Link>
+                </Col>
+              ))}
+            </Row>
+            <Row>
+              <Col>
+                {/* <Link to="/cart"> */}
+                <ButtonComponent
+                  className="button-cart"
+                  customStyle="btn-product"
+                  content="ADD TO CART"
+                  onClick={handleAddToCart}
+                />
+                {/* </Link> */}
               </Col>
             </Row>
 
@@ -128,9 +141,9 @@ const ProductPage = (props) => {
               <CustomAccordion
                 className="accordion-style"
                 accordionBtnTitle="Description"
-                accordionBTnBody="Our breathable, silky-smooth sneaker made with responsibly sourced eucalyptus tree fiber treads lightly in everything you do. Made in Reading UK"
+                accordionBTnBody={productData.summaryDescription}
                 accordionBtnListTitle="Features"
-                accordionBtnListItems="Renewable Materials"
+                accordionBtnListItems={productData.features}
               />
             </Col>
           </Col>

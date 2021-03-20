@@ -42,8 +42,11 @@ const CustomAccordion = ({
           <Accordion.Collapse eventKey="1">
             <Card.Body>
               <ul>
-                <li>{accordionBtnListItems}</li>
+              {accordionBtnListItems.map(item =>(
+                <li key={item.id}>{item.description}</li>
+              ))}
               </ul>
+              
             </Card.Body>
           </Accordion.Collapse>
         </Card>

@@ -10,7 +10,43 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgb(19, 87, 155);
+}
+
+.shoe-color-charcoal {
+  background: rgb(76, 67, 65);
+  border: 1px solid rgb(211, 212, 213);
+}
+
+.shoe-color-mist {
+  background: linear-gradient(
+    140deg,
+    rgb(136, 134, 136) 50%,
+    rgb(255, 255, 255) 50%
+  );
+  border: 1px solid rgb(211, 212, 213);
+}
+
+.shoe-color-tan-leather {
+  background: rgb(110 76 57);
+  border: 1px solid rgb(211, 212, 213);
+}
+
+.shoe-color-black-leather {
+  background: rgb(35 35 35);
+  border: 1px solid rgb(211, 212, 213);
+}
+
+.shoe-color-heathered-black {
+  background: linear-gradient(140deg, rgb(46, 44, 47) 50%, rgb(57, 57, 59) 50%);
+  border: 1px solid rgb(211, 212, 213);
+}
+
+.shoe-color-salt {
+  background: linear-gradient(
+    140deg,
+    rgb(181, 181, 190) 50%,
+    rgb(255, 255, 255) 50%
+  );
   border: 1px solid rgb(211, 212, 213);
 }
 
@@ -33,5 +69,3 @@
   width: 80%;
   margin-left: 2rem;
 }
-
-

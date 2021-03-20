@@ -7,6 +7,7 @@ const products = [
       {
         id: "1",
         color: "Charcoal (Charcoal Sole)",
+        colorCode: "charcoal",
         images:[
           {
             src: 'https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/Men_s_Tree_Runners_-_Charcoal__Charcoal_Sole__-_imageAngle_24fc0bab-31c1-40c4-9363-166541d7a70a.png?v=1614723172',
@@ -34,6 +35,7 @@ const products = [
       {
         id: "2",
         color: "Mist (White Sole)",
+        colorCode: "mist",
         images:[
           {
             src: 'https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/TR3MMST080_SHOE_ANGLE_GLOBAL_MENS_TREE_RUNNER_MIST_WHITE.png?v=1614724703',
@@ -94,6 +96,7 @@ const products = [
       {
         id: "3",
         color: "Tan Leather",
+        colorCode: "tan-leather",
         images:[
           {
             src: 'https://clarks.scene7.com/is/image/Pangaea2Build/26147956_W_1?wid=2000&hei=2000&fmt=jpg',
@@ -121,6 +124,7 @@ const products = [
       {
         id: "4",
         color: "Black Leather",
+        colorCode: "black-leather",
         images:[
           {
             src: 'https://clarks.scene7.com/is/image/Pangaea2Build/26148917_W_1?wid=2000&hei=2000&fmt=jpg',
@@ -173,6 +177,7 @@ const products = [
       {
         id: "5",
         color: "Heathered Black (Black Sole)",
+        colorCode: "heathered-black",
         images:[
           {
             src: 'https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/TB1WHBK080_SHOE_ANGLE_GLOBAL_WOMENS_TREE_BREEZERS_HEATHERED_BLACK_BLACK_82fa40cf-f47f-45e2-9efc-d4ac34740148.png?v=1598999348',
@@ -200,6 +205,7 @@ const products = [
       {
         id: "6",
         color: "Salt (Grey Sole)",
+        colorCode: "salt",
         images:[
           {
             src: 'https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/TB1WSAL080_SHOE_ANGLE_GLOBAL_WOMENS_TREE_BREEZER_SALT_WHITE_c524a164-1721-44c8-bbdc-ab7c48905274.png?v=1598999494',
@@ -260,6 +266,6 @@ export const getShoes = () => {
 };
 
 
-export const getMovie = (id) => {
+export const getShoe = (id) => {
   return products.find(product => product.id === id  );
 };
