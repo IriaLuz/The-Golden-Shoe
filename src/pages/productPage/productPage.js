@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,6 +16,15 @@ const ProductPage = (props) => {
   const productData = getShoe(productId);
   const [selectedShoe, setSelectedShoe] = useState(productData.inventory[0]);
   const [selectedSize, setSelectedSize] = useState({});
+  const [finalPrice, setFinalPrice] = useState(productData.price);
+  const [promoCode, setPromoCode] = useState('');
+  const [promoCodeAlert, setPromoCodeAlert] = useState({});
+
+  const availableDiscounts = [
+    { promoCode: 'AND20', discount: 0.2 },
+    { promoCode: 'AND35', discount: 0.35 },
+    { promoCode: 'AND50', discount: 0.5 },
+  ];
 
   const handleSelectedSize = (newSize) => {
     const newSizeSelected = newSize.size === selectedSize.size ? {} : newSize;
@@ -31,12 +41,34 @@ const ProductPage = (props) => {
 
   const handleAddToCart = () => {
     console.log('item added to cart');
+    alert('Here goes the modal with message - Item Added to Cart');
+  };
+
+  const handleApplyPromoCode = (appliedCode) => {
+    const newSelectedDiscount = availableDiscounts.find(
+      (discount) => discount.promoCode === appliedCode,
+    ) || { discount: 0 };
+
+    const newPromoCodeAlert =
+      newSelectedDiscount.discount > 0
+        ? {
+            message: 'Promo Code Applied Successfully',
+            textStyling: 'alert-success',
+          }
+        : { message: 'Invalid Promo Code', textStyling: 'alert-danger' };
+
+    setPromoCodeAlert(newPromoCodeAlert);
+    const discountedPrice =
+      productData.price * (1 - newSelectedDiscount.discount);
+    setFinalPrice(discountedPrice);
+  };
+
+  const handlePromoCodeChange = ({ currentTarget: { value } }) => {
+    setPromoCode(value);
   };
 
   const addToCartMessage =
-    selectedSize.stock === 0
-      ? 'SIZE SOLD OUT'
-      : `ADD TO CART - £${productData.price}`;
+    selectedSize.stock === 0 ? 'SIZE SOLD OUT' : `ADD TO CART - £${finalPrice}`;
   return (
     <>
       <Container>
@@ -95,17 +127,48 @@ const ProductPage = (props) => {
                 <CustomModal />
               </Col>
             </Row>
-
+            <Row>
+              <Col className="text-left">
+                <Row>
+                  <Col className="text-left">
+                    <span>Promo Code </span>
+                    <span className="font-italic">(try using AND20)</span>
+                  </Col>
+                </Row>
+                <Form inline>
+                  <Form.Group controlId="promoCode">
+                    <Form.Control
+                      type="string"
+                      value={promoCode}
+                      onChange={handlePromoCodeChange}
+                      placeholder="Enter Promo Code"
+                    />
+                  </Form.Group>
+                  <ButtonComponent
+                    disabled={!promoCode}
+                    variantValue="dark"
+                    content="Apply"
+                    onClick={() => handleApplyPromoCode(promoCode)}
+                  />
+                </Form>
+              </Col>
+            </Row>
+            {promoCodeAlert.message && (
+              <div
+                className={`alert ${promoCodeAlert.textStyling}`}
+                role="alert"
+              >
+                {promoCodeAlert.message}
+              </div>
+            )}
             <Row>
               <Col>
-                {/* <Link to="/cart"> */}
                 <ButtonComponent
                   className="button-cart"
                   customStyle="btn-product"
                   content={selectedSize.size ? addToCartMessage : 'SELECT SIZE'}
                   onClick={handleAddToCart}
                 />
-                {/* </Link> */}
               </Col>
             </Row>
 

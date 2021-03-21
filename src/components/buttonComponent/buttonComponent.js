@@ -8,10 +8,12 @@ const ButtonComponent = ({
   subContent,
   customStyle,
   onClick,
+  disabled
 }) => {
   const variant = customStyle ? '' : variantValue;
   return (
     <Button
+      disabled={disabled}
       data-testid="button"
       bsPrefix={customStyle}
       variant={variant}
