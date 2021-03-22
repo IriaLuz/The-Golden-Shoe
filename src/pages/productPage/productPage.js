@@ -12,33 +12,38 @@ import { getShoe } from '../../services/fakeShoeService';
 import CartModal from '../../components/CartModal/cartModal';
 import './productPage.css';
 
+const alerts = {
+  'alert-success': 'Promo Code Applied Successfully',
+  'alert-danger': 'Invalid Promo Code',
+};
+
+const availableDiscounts = [
+  { promoCode: 'AND20', discount: 0.2 },
+  { promoCode: 'AND35', discount: 0.35 },
+  { promoCode: 'AND50', discount: 0.5 },
+];
+
 const ProductPage = (props) => {
   const productId = props.match.params.id;
   const productData = getShoe(productId);
-  const [selectedShoe, setSelectedShoe] = useState(productData.inventory[0]);
+  const [selectedColor, setSelectedColor] = useState(productData.inventory[0]);
   const [selectedSize, setSelectedSize] = useState({});
   const [finalPrice, setFinalPrice] = useState(productData.price);
-  const [promoCode, setPromoCode] = useState('');
-  const [promoCodeAlert, setPromoCodeAlert] = useState({});
+  const [promoCode, setPromoCode] = useState();
+  const [promoCodeAlert, setPromoCodeAlert] = useState();
   const [modalShow, setModalShow] = useState(false);
-
-  const availableDiscounts = [
-    { promoCode: 'AND20', discount: 0.2 },
-    { promoCode: 'AND35', discount: 0.35 },
-    { promoCode: 'AND50', discount: 0.5 },
-  ];
 
   const handleSelectedSize = (newSize) => {
     const newSizeSelected = newSize.size === selectedSize.size ? {} : newSize;
     setSelectedSize(newSizeSelected);
-    console.log(newSizeSelected);
+    // console.log(newSizeSelected);
   };
 
   const handleColorSelection = (selectedShoeId) => {
-    const newSelectedShoe = productData.inventory.find(
+    const newSelectedColor = productData.inventory.find(
       (shoeColor) => shoeColor.id === selectedShoeId,
     );
-    setSelectedShoe(newSelectedShoe);
+    setSelectedColor(newSelectedColor);
   };
 
   const handleAddToCart = () => {
@@ -50,15 +55,9 @@ const ProductPage = (props) => {
       (discount) => discount.promoCode === appliedCode,
     ) || { discount: 0 };
 
-    const newPromoCodeAlert =
-      newSelectedDiscount.discount > 0
-        ? {
-            message: 'Promo Code Applied Successfully',
-            textStyling: 'alert-success',
-          }
-        : { message: 'Invalid Promo Code', textStyling: 'alert-danger' };
-
-    setPromoCodeAlert(newPromoCodeAlert);
+    setPromoCodeAlert(
+      newSelectedDiscount.discount > 0 ? 'alert-success' : 'alert-danger',
+    );
     const discountedPrice =
       productData.price * (1 - newSelectedDiscount.discount);
     setFinalPrice(discountedPrice);
@@ -77,13 +76,13 @@ const ProductPage = (props) => {
   return (
     <>
       <Container>
-        <Row>
+        <Row className="content">
           <Col className="mr-2">
             <Col>
-              <CustomCarousel images={selectedShoe.images} />
+              <CustomCarousel images={selectedColor.images} />
             </Col>
           </Col>
-          <Col xs={6}>
+          <Col md={6}>
             <Row>
               <Col className="text-left">
                 <h2>{productData.name}</h2>
@@ -112,7 +111,7 @@ const ProductPage = (props) => {
             </Row>
 
             <Row>
-              {selectedShoe.sizes.map((size) => {
+              {selectedColor.sizes.map((size) => {
                 let shoeSizeStyle =
                   size.size === selectedSize.size
                     ? 'btn-shoe-size-selected btn-shoe-size'
@@ -165,12 +164,9 @@ const ProductPage = (props) => {
                 </Form>
               </Col>
             </Row>
-            {promoCodeAlert.message && (
-              <div
-                className={`alert ${promoCodeAlert.textStyling}`}
-                role="alert"
-              >
-                {promoCodeAlert.message}
+            {promoCodeAlert && (
+              <div className={`alert ${promoCodeAlert}`} role="alert">
+                {alerts[promoCodeAlert]}
               </div>
             )}
             <Row>

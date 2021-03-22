@@ -89,3 +89,9 @@
   background-color: grey;
   border-color: #bf900000;
 }
+
+@media (max-width: 576px) {
+  .content {
+    flex-direction: column;
+  }
+}
