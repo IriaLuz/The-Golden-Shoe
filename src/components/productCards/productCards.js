@@ -1,8 +1,5 @@
 import React from 'react';
 import { CardDeck } from 'react-bootstrap';
-import Image1 from './images/card-1-shoe-model.jpg';
-import Image2 from './images/card-2-shoe-model.jpg';
-import Image3 from './images/card-3-shoe-model.jpg';
 import './productCards.css';
 import ProductCard from '../productCard/productCard';
 
@@ -13,8 +10,8 @@ const ProductCards = () => {
       <hr id="divider-card-style" />
       <CardDeck bsPrefix="cards-container card-deck">
         <ProductCard
-          image={Image1}
-          title="Pro Leather"
+          image="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/Men_s_Tree_Runners_-_Charcoal__Charcoal_Sole__-_imageAngle_24fc0bab-31c1-40c4-9363-166541d7a70a.png?v=1614723172"
+          title="Tree Runners"
           textStyling="style-text-cardbody"
           cardBody="This is a wider card with supporting text below as a natural lead-in
       to additional content. This content is a little bit longer."
@@ -24,8 +21,8 @@ const ProductCards = () => {
           buttonLink="/products/1"
         />
         <ProductCard
-          image={Image2}
-          title="Safety Boots"
+          image="https://clarks.scene7.com/is/image/Pangaea2Build/26147956_W_1?wid=2000&hei=2000&fmt=jpg"
+          title="Tan Leather"
           textStyling="color-text"
           cardBody="This card has supporting text below as a natural lead-in to
         additional content."
@@ -35,8 +32,8 @@ const ProductCards = () => {
           buttonLink="/products/2"
         />
         <ProductCard
-          image={Image3}
-          title="Tree Dasher"
+          image="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_1200,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/0074/1307/1990/products/TB1WHBK080_SHOE_ANGLE_GLOBAL_WOMENS_TREE_BREEZERS_HEATHERED_BLACK_BLACK_82fa40cf-f47f-45e2-9efc-d4ac34740148.png?v=1598999348"
+          title="Women's Tree Breezers"
           textStyling="color-text"
           cardBody="This is a wider card with supporting text below as a natural lead-in
         to additional content. This card has even longer content than the
