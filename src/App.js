@@ -9,6 +9,7 @@ import AboutPage from './pages/aboutPage/aboutPage';
 import FaqPage from './pages/faqPage/faqPage';
 import CartPage from './pages/cartPage/cartPage';
 import ProductsPage from './pages/productsPage/productsPage';
+import CartModal from './components/CartModal/cartModal';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/about" component={AboutPage} />
             <Route path="/faq" component={FaqPage} />
             <Route path="/cart" component={CartPage} />
+            <Route path= '/buy' component= {CartModal}/>
             <Route path="/" exact component={HomePage} />
           </Switch>
         </main>

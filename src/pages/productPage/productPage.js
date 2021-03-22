@@ -8,8 +8,9 @@ import ButtonComponent from '../../components/buttonComponent/buttonComponent';
 import CustomAccordion from '../../components/customAccordion/customAccordion';
 import CustomModal from '../../components/customModal/customModal';
 import CustomCarousel from '../../components/customCarousel/customCarousel';
-import './productPage.css';
 import { getShoe } from '../../services/fakeShoeService';
+import CartModal from '../../components/CartModal/cartModal';
+import './productPage.css';
 
 const ProductPage = (props) => {
   const productId = props.match.params.id;
@@ -19,6 +20,7 @@ const ProductPage = (props) => {
   const [finalPrice, setFinalPrice] = useState(productData.price);
   const [promoCode, setPromoCode] = useState('');
   const [promoCodeAlert, setPromoCodeAlert] = useState({});
+  const [modalShow, setModalShow] = useState(false);
 
   const availableDiscounts = [
     { promoCode: 'AND20', discount: 0.2 },
@@ -29,7 +31,7 @@ const ProductPage = (props) => {
   const handleSelectedSize = (newSize) => {
     const newSizeSelected = newSize.size === selectedSize.size ? {} : newSize;
     setSelectedSize(newSizeSelected);
-    console.log(newSizeSelected);
+    console.log(selectedSize);
   };
 
   const handleColorSelection = (selectedShoeId) => {
@@ -40,8 +42,7 @@ const ProductPage = (props) => {
   };
 
   const handleAddToCart = () => {
-    console.log('item added to cart');
-    alert('Here goes the modal with message - Item Added to Cart');
+    setModalShow(true);
   };
 
   const handleApplyPromoCode = (appliedCode) => {
@@ -66,6 +67,8 @@ const ProductPage = (props) => {
   const handlePromoCodeChange = ({ currentTarget: { value } }) => {
     setPromoCode(value);
   };
+
+  const buttonCartStyle = selectedSize.size? "btn-product btn-product-selected-size": "btn-product btn-product-unselected-size";
 
   const addToCartMessage =
     selectedSize.stock === 0 ? 'SIZE SOLD OUT' : `ADD TO CART - £${finalPrice}`;
@@ -165,9 +168,10 @@ const ProductPage = (props) => {
               <Col>
                 <ButtonComponent
                   className="button-cart"
-                  customStyle="btn-product"
+                  customStyle={selectedSize.stock===0 ? 'btn-product btn-product-no-stock' :buttonCartStyle}
                   content={selectedSize.size ? addToCartMessage : 'SELECT SIZE'}
                   onClick={handleAddToCart}
+                  disabled= {!selectedSize.size || selectedSize.stock===0}
                 />
               </Col>
             </Row>
@@ -184,6 +188,10 @@ const ProductPage = (props) => {
           </Col>
         </Row>
       </Container>
+      <CartModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </>
   );
 };
