@@ -31,7 +31,7 @@ const ProductPage = (props) => {
   const handleSelectedSize = (newSize) => {
     const newSizeSelected = newSize.size === selectedSize.size ? {} : newSize;
     setSelectedSize(newSizeSelected);
-    console.log(selectedSize);
+    console.log(newSizeSelected);
   };
 
   const handleColorSelection = (selectedShoeId) => {
@@ -68,7 +68,9 @@ const ProductPage = (props) => {
     setPromoCode(value);
   };
 
-  const buttonCartStyle = selectedSize.size? "btn-product btn-product-selected-size": "btn-product btn-product-unselected-size";
+  const buttonCartStyle = selectedSize.size
+    ? 'btn-product btn-product-selected-size'
+    : 'btn-product btn-product-unselected-size';
 
   const addToCartMessage =
     selectedSize.stock === 0 ? 'SIZE SOLD OUT' : `ADD TO CART - £${finalPrice}`;
@@ -110,20 +112,27 @@ const ProductPage = (props) => {
             </Row>
 
             <Row>
-              {selectedShoe.sizes.map((size) => (
-                <Col className="flex-grow-0">
-                  <ButtonComponent
-                    customStyle={
-                      size.stock === 0
-                        ? 'btn-shoe-size btn-shoe-size-no-stock'
-                        : 'btn-shoe-size'
-                    }
-                    content={size.format}
-                    subContent={size.size}
-                    onClick={() => handleSelectedSize(size)}
-                  />
-                </Col>
-              ))}
+              {selectedShoe.sizes.map((size) => {
+                let shoeSizeStyle =
+                  size.size === selectedSize.size
+                    ? 'btn-shoe-size-selected btn-shoe-size'
+                    : 'btn-shoe-size';
+
+                shoeSizeStyle =
+                  size.stock === 0
+                    ? 'btn-shoe-size btn-shoe-size-no-stock'
+                    : shoeSizeStyle;
+                return (
+                  <Col className="flex-grow-0">
+                    <ButtonComponent
+                      customStyle={shoeSizeStyle}
+                      content={size.format}
+                      subContent={size.size}
+                      onClick={() => handleSelectedSize(size)}
+                    />
+                  </Col>
+                );
+              })}
             </Row>
             <Row>
               <Col className="text-left">
@@ -168,10 +177,14 @@ const ProductPage = (props) => {
               <Col>
                 <ButtonComponent
                   className="button-cart"
-                  customStyle={selectedSize.stock===0 ? 'btn-product btn-product-no-stock' :buttonCartStyle}
+                  customStyle={
+                    selectedSize.stock === 0
+                      ? 'btn-product btn-product-no-stock'
+                      : buttonCartStyle
+                  }
                   content={selectedSize.size ? addToCartMessage : 'SELECT SIZE'}
                   onClick={handleAddToCart}
-                  disabled= {!selectedSize.size || selectedSize.stock===0}
+                  disabled={!selectedSize.size || selectedSize.stock === 0}
                 />
               </Col>
             </Row>
@@ -188,10 +201,7 @@ const ProductPage = (props) => {
           </Col>
         </Row>
       </Container>
-      <CartModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+      <CartModal show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 };
