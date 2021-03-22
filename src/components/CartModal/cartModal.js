@@ -11,15 +11,14 @@ const CartModal = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      
       <Modal.Body>
         <h4>Thank you for shopping with us!</h4>
-        <p>
-          Your item has being added to the cart successfully.
-        </p>
+        <p>Your item has being added to the cart successfully.</p>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant='secondary' onClick={props.onHide}>Close</Button>
+        <Button variant="secondary" onClick={props.onHide}>
+          Close
+        </Button>
       </Modal.Footer>
     </Modal>
   );

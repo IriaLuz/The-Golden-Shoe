@@ -8,7 +8,7 @@ const ButtonComponent = ({
   subContent,
   customStyle,
   onClick,
-  disabled
+  disabled,
 }) => {
   const variant = customStyle ? '' : variantValue;
   return (

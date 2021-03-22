@@ -8,9 +8,9 @@ const AppFooter = () => {
     <div className="main-footer">
       <hr />
       <div className="footer-logo-container">
-        <Link to="/">
+        <a href="/">
           <img className="logo-footer" src={logo} alt="logo" />
-        </Link>
+        </a>
       </div>
 
       <div className="container">
