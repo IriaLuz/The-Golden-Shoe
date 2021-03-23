@@ -16,7 +16,7 @@ const NotFound = () => {
       </Col>
       <hr id="divider-card-style" />
       <Col>
-        <h1>Ups! something went wrong</h1>
+        <h1>Oops! something went wrong</h1>
       </Col>
         <Row>
         <Col>

@@ -20,10 +20,16 @@ const AppFooter = () => {
             <ul className="list-footer">
               <h4>Help</h4>
               <li>
-                <Link className="link-footer-style" to="/faq">
-                  FAQ/Contact us
+                <Link className="link-footer-style" to="/contact-us">
+                  Contact us
                 </Link>
               </li>
+              <li>
+                <Link className="link-footer-style" to="/faq">
+                  FAQ
+                </Link>
+              </li>
+              
             </ul>
           </div>
           {/* colum2 */}

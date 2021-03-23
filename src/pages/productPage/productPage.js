@@ -9,7 +9,7 @@ import CustomAccordion from '../../components/customAccordion/customAccordion';
 import CustomModal from '../../components/customModal/customModal';
 import CustomCarousel from '../../components/customCarousel/customCarousel';
 import { getShoe } from '../../services/fakeShoeService';
-import CartModal from '../../components/CartModal/cartModal';
+import CartModal from '../../components/cartModal/cartModal';
 import './productPage.css';
 
 const alerts = {
@@ -198,7 +198,12 @@ const ProductPage = (props) => {
           </Col>
         </Row>
       </Container>
-      <CartModal show={modalShow} onHide={() => setModalShow(false)} />
+      <CartModal
+        title="Thank you for shopping with us"
+        content="Your item has being added to the cart!"
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </>
   );
 };

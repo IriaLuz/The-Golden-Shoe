@@ -9,6 +9,8 @@ const ButtonComponent = ({
   customStyle,
   onClick,
   disabled,
+  type,
+  onSubmit
 }) => {
   const variant = customStyle ? '' : variantValue;
   return (
@@ -18,6 +20,8 @@ const ButtonComponent = ({
       bsPrefix={customStyle}
       variant={variant}
       onClick={onClick}
+      type={type}
+      onSubmit={onSubmit}
     >
       {content && <span>{content}</span>}
       {subContent && <span>{subContent}</span>}
