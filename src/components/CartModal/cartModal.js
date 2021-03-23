@@ -3,7 +3,6 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 const CartModal = (props) => {
-  
   return (
     <Modal
       /* eslint-disable react/jsx-props-no-spreading */

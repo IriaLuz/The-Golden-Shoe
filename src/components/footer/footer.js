@@ -29,7 +29,6 @@ const AppFooter = () => {
                   FAQ
                 </Link>
               </li>
-              
             </ul>
           </div>
           {/* colum2 */}
