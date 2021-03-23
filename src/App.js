@@ -9,7 +9,6 @@ import AboutPage from './pages/aboutPage/aboutPage';
 import FaqPage from './pages/faqPage/faqPage';
 import CartPage from './pages/cartPage/cartPage';
 import ProductsPage from './pages/productsPage/productsPage';
-import CartModal from './components/cartModal/cartModal';
 import NotFound from './pages/page404/page404';
 import ContactUsForm from './components/contactUsForm/contactUsForm';
 
@@ -27,7 +26,6 @@ function App() {
             <Route path="/about" component={AboutPage} />
             <Route path="/faq" component={FaqPage} />
             <Route path="/cart" component={CartPage} />
-            <Route path="/buy" component={CartModal} />
             <Route path="/contact-us" component={ContactUsForm} />
             <Route path="/" exact component={HomePage} />
             <Route path="/not-found" component={NotFound} />
