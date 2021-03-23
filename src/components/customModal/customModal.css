@@ -1,0 +1,17 @@
+#size-chart {
+  width: 100%;
+}
+
+.modal-btn {
+  color: black;
+  box-shadow: none;
+  text-decoration: underline;
+  text-align: start;
+  padding: 0rem;
+}
+
+.modal-btn:focus,
+.modal-btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0;
+}

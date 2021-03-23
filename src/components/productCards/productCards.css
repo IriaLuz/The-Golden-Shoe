@@ -1,21 +1,30 @@
-.color-text {
+.style-text-cardbody {
   color: black;
 }
 
-#text-style {
+#text-style-cardtitle {
   text-align: center;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
+  color: black;
 }
 .cards-container {
   margin-left: 3rem !important;
   margin-right: 3rem !important;
 }
 
-#divider-style {
+#divider-card-style {
   margin-top: 2rem;
   margin-bottom: 1rem;
   border: 0;
   border-top: 2px solid #bf9000;
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.btn-card {
+  width: 100%;
+  color: #fff;
+  background-color: #bf9000;
+  border-color: #bf900000;
+  border-radius: 0.25rem;
 }

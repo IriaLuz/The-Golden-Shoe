@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './images/white-logo.png';
 import './footer.css';
 
@@ -8,7 +9,7 @@ const AppFooter = () => {
       <hr />
       <div className="footer-logo-container">
         <a href="/">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logo-footer" src={logo} alt="logo" />
         </a>
       </div>
 
@@ -16,23 +17,23 @@ const AppFooter = () => {
         <div className="row">
           {/* column1 */}
           <div className="col">
-            <h4>Help</h4>
-            <ul className="list-unstyled">
+            <ul className="list-footer">
+              <h4>Help</h4>
               <li>
-                <a className="link-footer-style" href="/">
+                <Link className="link-footer-style" to="/faq">
                   FAQ/Contact us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           {/* colum2 */}
           <div className="col">
-            <h4>Shop</h4>
-            <ul className="list-unstyled">
+            <ul className="list-footer">
+              <h4>Shop</h4>
               <li>
-                <a className="link-footer-style" href="/">
+                <Link className="link-footer-style" to="/products">
                   Products
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

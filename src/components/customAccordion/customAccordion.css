@@ -1,0 +1,18 @@
+.btn-accordion {
+  color: black;
+  box-shadow: none;
+  text-decoration: none;
+  border-radius: none;
+  border-left: none;
+  border-right: none;
+}
+.accordion-card-header {
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+}

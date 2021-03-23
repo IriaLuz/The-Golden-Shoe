@@ -3,7 +3,7 @@
   width: 350px;
 }
 
-#background-image {
+#background-image-herobanner {
   background-image: url('./images/hero-banner-image.jpg');
   background-size: cover;
   background-position: bottom;
@@ -18,8 +18,7 @@
   flex-direction: column;
 }
 
-h1,
-p {
+.text-style-herobanner {
   font-style: italic;
   color: honeydew;
 }

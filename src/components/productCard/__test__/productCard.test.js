@@ -13,21 +13,21 @@ describe('should render ProductCard', () => {
   it('should render card title with title="Tree Dasher"', () => {
     const expectedText = 'Tree Dasher';
     render(<ProductCard title={expectedText} />);
-    const cardTitleElement = screen.getByTestId('title');
+    const cardTitleElement = screen.getByTestId('card-title');
     expect(cardTitleElement).toHaveTextContent('Tree Dasher');
   });
 
   it('should render card textStyle with textStyling="color-text"', () => {
     const expectedStyle = 'color-text';
     render(<ProductCard textStyling={expectedStyle} />);
-    const cardStyleElement = screen.getByTestId('textStyling');
+    const cardStyleElement = screen.getByTestId('text-card');
     expect(cardStyleElement).toHaveAttribute('class', expectedStyle);
   });
 
   it('should render card text body with cardBody="Text example"', () => {
     const expectedText = 'Text example';
     render(<ProductCard cardBody={expectedText} />);
-    const cardTextBodyElement = screen.getByTestId('textStyling');
+    const cardTextBodyElement = screen.getByTestId('text-card');
     expect(cardTextBodyElement).toHaveTextContent(expectedText);
   });
 
@@ -73,11 +73,11 @@ describe('should render ProductCard', () => {
     );
     const cardImageElement = screen.getByTestId('cardImg');
     expect(cardImageElement).toHaveAttribute('src', expectedImage);
-    const cardTitleElement = screen.getByTestId('title');
+    const cardTitleElement = screen.getByTestId('card-title');
     expect(cardTitleElement).toHaveTextContent(expectedTextTitle);
-    const cardStyleElement = screen.getByTestId('textStyling');
+    const cardStyleElement = screen.getByTestId('text-card');
     expect(cardStyleElement).toHaveAttribute('class', expectedTextStyle);
-    const cardTextBodyElement = screen.getByTestId('textStyling');
+    const cardTextBodyElement = screen.getByTestId('text-card');
     expect(cardTextBodyElement).toHaveTextContent(expectedTextCardBody);
     const cardButtonStyleElement = screen.getByTestId('button');
     expect(cardButtonStyleElement).toHaveAttribute(

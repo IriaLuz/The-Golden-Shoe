@@ -1,17 +1,27 @@
 import React from 'react';
-import CustomButton from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import './buttonComponent.css';
 
 const ButtonComponent = ({
   variantValue = 'primary',
   content,
+  subContent,
   customStyle,
+  onClick,
+  disabled,
 }) => {
   const variant = customStyle ? '' : variantValue;
   return (
-    <CustomButton data-testid="button" bsPrefix={customStyle} variant={variant}>
-      {content}
-    </CustomButton>
+    <Button
+      disabled={disabled}
+      data-testid="button"
+      bsPrefix={customStyle}
+      variant={variant}
+      onClick={onClick}
+    >
+      {content && <span>{content}</span>}
+      {subContent && <span>{subContent}</span>}
+    </Button>
   );
 };
 
