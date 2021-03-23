@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 const CartModal = (props) => {
+  
   return (
     <Modal
       /* eslint-disable react/jsx-props-no-spreading */
@@ -12,8 +13,8 @@ const CartModal = (props) => {
       centered
     >
       <Modal.Body>
-        <h4>Thank you for shopping with us!</h4>
-        <p>Your item has being added to the cart successfully.</p>
+        <h4>{props.title}</h4>
+        <p>{props.content}</p>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={props.onHide}>
