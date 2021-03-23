@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import image from './image/surprised.png';
+import image from './image/surprised2.png';
 import './page404.css';
 
 const NotFound = () => {

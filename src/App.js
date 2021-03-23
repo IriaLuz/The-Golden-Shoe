@@ -1,6 +1,6 @@
 import './App.css';
 import { React } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import ProductPage from './pages/productPage/productPage';
 import NavbarComponent from './components/navbar/navbar';
 import HomePage from './pages/homePage/homepage';
@@ -10,6 +10,7 @@ import FaqPage from './pages/faqPage/faqPage';
 import CartPage from './pages/cartPage/cartPage';
 import ProductsPage from './pages/productsPage/productsPage';
 import CartModal from './components/CartModal/cartModal';
+import NotFound from './pages/page404/page404';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
             <Route path="/cart" component={CartPage} />
             <Route path="/buy" component={CartModal} />
             <Route path="/" exact component={HomePage} />
+            <Route path="/not-found" component={NotFound}/>
+            <Redirect to= '/not-found'/>
           </Switch>
         </main>
       </div>
