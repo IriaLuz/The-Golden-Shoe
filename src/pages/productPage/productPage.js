@@ -26,6 +26,7 @@ const availableDiscounts = [
 const ProductPage = (props) => {
   const productId = props.match.params.id;
   const productData = getShoe(productId);
+  if (!productData) window.location = '/not-found';
   const [selectedColor, setSelectedColor] = useState(productData.inventory[0]);
   const [selectedSize, setSelectedSize] = useState({});
   const [finalPrice, setFinalPrice] = useState(productData.price);
