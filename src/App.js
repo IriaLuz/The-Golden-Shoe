@@ -30,8 +30,8 @@ function App() {
             <Route path="/buy" component={CartModal} />
             <Route path="/contact-us" component={ContactUsForm} />
             <Route path="/" exact component={HomePage} />
-            <Route path="/not-found" component={NotFound}/>
-            <Redirect to= '/not-found'/>
+            <Route path="/not-found" component={NotFound} />
+            <Redirect to="/not-found" />
           </Switch>
         </main>
       </div>

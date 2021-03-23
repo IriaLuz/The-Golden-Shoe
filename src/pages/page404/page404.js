@@ -9,8 +9,7 @@ import './page404.css';
 
 const NotFound = () => {
   return (
-    <Container >
-      
+    <Container>
       <Col>
         <h1>ERROR 404</h1>
       </Col>
@@ -18,7 +17,7 @@ const NotFound = () => {
       <Col>
         <h1>Oops! something went wrong</h1>
       </Col>
-        <Row>
+      <Row>
         <Col>
           <h2>
             Please Click here <Link to="/">Here</Link> to go to Home Page
@@ -29,7 +28,6 @@ const NotFound = () => {
       <Col>
         <Image className="content-image404" src={image} alt="not found" />
       </Col>
-     
     </Container>
   );
 };

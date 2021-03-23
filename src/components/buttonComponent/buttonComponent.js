@@ -10,7 +10,7 @@ const ButtonComponent = ({
   onClick,
   disabled,
   type,
-  onSubmit
+  onSubmit,
 }) => {
   const variant = customStyle ? '' : variantValue;
   return (
