@@ -38,6 +38,8 @@ const ContactUsForm = () => {
               <Form.Label>What can we help you with?</Form.Label>
               <Form.Control
                 required
+                as="textarea"
+                rows={3}
                 onChange={handleChange}
                 type="string"
                 value={userRequest.question}
