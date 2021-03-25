@@ -11,6 +11,7 @@ const FaqPage = () => {
       <Col>
         <h1>Frequently Asked Questions</h1>
       </Col>
+      <hr id="fqa-divider" />
       <Row>
         <Col>
           <FaqAccordion

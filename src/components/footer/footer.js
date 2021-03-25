@@ -21,7 +21,7 @@ const AppFooter = () => {
               <h4>Help</h4>
               <li>
                 <Link className="link-footer-style" to="/contact-us">
-                  Contact us
+                  CONTACT US
                 </Link>
               </li>
               <li>
@@ -37,7 +37,7 @@ const AppFooter = () => {
               <h4>Shop</h4>
               <li>
                 <Link className="link-footer-style" to="/products">
-                  Products
+                  PRODUCTS
                 </Link>
               </li>
             </ul>
