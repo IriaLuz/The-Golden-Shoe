@@ -10,7 +10,7 @@ const ProductsPage = () => {
   return (
     <Container>
       <>
-        <hr id="divider-card-style" />
+        <hr id="divider-products-page" />
         <CardDeck bsPrefix="cards-container card-deck">
           <Col>
             <Row>

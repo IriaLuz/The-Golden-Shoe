@@ -15,7 +15,9 @@ const ProductCard = ({
 }) => {
   return (
     <Card>
-      <Card.Img data-testid="cardImg" variant="top" src={image} />
+      <Link to={buttonLink}>
+        <Card.Img data-testid="cardImg" variant="top" src={image} />
+      </Link>
       <Card.Body>
         <Card.Title data-testid="card-title"> {title}</Card.Title>
         <Card.Text data-testid="text-card" bsPrefix={textStyling}>

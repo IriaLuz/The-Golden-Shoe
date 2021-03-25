@@ -84,8 +84,6 @@ const ProductPage = (props) => {
     ? 'btn-product btn-product-selected-size'
     : 'btn-product btn-product-unselected-size';
 
-  const addToCartMessage =
-    selectedSize.stock === 0 ? 'SIZE SOLD OUT' : `ADD TO CART - £${finalPrice}`;
   return (
     <>
       {selectedColor && (
@@ -142,6 +140,7 @@ const ProductPage = (props) => {
                         content={size.format}
                         subContent={size.size}
                         onClick={() => handleSelectedSize(size)}
+                        disabled={size.stock === 0}
                       />
                     </Col>
                   );
@@ -193,7 +192,9 @@ const ProductPage = (props) => {
                         : buttonCartStyle
                     }
                     content={
-                      selectedSize.size ? addToCartMessage : 'SELECT SIZE'
+                      selectedSize.size
+                        ? `ADD TO CART - £${finalPrice}`
+                        : 'SELECT SIZE'
                     }
                     onClick={handleAddToCart}
                     disabled={!selectedSize.size || selectedSize.stock === 0}
