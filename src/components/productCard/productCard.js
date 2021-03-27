@@ -11,11 +11,11 @@ const ProductCard = ({
   buttonStyling,
   buttonLabel,
   cardFooterText,
-  buttonLink,
+  buttonLink="/not-found",
 }) => {
   return (
     <Card>
-      <Link to={buttonLink}>
+      <Link to={buttonLink} data-testid="card-link">
         <Card.Img data-testid="cardImg" variant="top" src={image} />
       </Link>
       <Card.Body>
