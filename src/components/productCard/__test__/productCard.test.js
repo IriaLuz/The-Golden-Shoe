@@ -20,7 +20,9 @@ describe('should render ProductCard', () => {
 
   it('should render card textStyle with textStyling="color-text"', () => {
     const expectedStyle = 'color-text';
-    render(<ProductCard textStyling={expectedStyle} />, { wrapper: MemoryRouter });
+    render(<ProductCard textStyling={expectedStyle} />, {
+      wrapper: MemoryRouter,
+    });
     const cardStyleElement = screen.getByTestId('text-card');
     expect(cardStyleElement).toHaveAttribute('class', expectedStyle);
   });
@@ -34,21 +36,27 @@ describe('should render ProductCard', () => {
 
   it('should render card button with buttonStyling="btn-gold"', () => {
     const expectedStyle = 'btn-gold';
-    render(<ProductCard buttonStyling={expectedStyle} />, { wrapper: MemoryRouter });
+    render(<ProductCard buttonStyling={expectedStyle} />, {
+      wrapper: MemoryRouter,
+    });
     const cardButtonStyleElement = screen.getByTestId('button');
     expect(cardButtonStyleElement).toHaveAttribute('class', expectedStyle);
   });
 
   it('should render card button with buttonLabel="Shop Now"', () => {
     const expectedText = 'Shop Now';
-    render(<ProductCard buttonLabel={expectedText} />, { wrapper: MemoryRouter });
+    render(<ProductCard buttonLabel={expectedText} />, {
+      wrapper: MemoryRouter,
+    });
     const cardButtonLabelElement = screen.getByTestId('button');
     expect(cardButtonLabelElement).toHaveTextContent(expectedText);
   });
 
   it('should render card text body with cardFooterText="Text example"', () => {
     const expectedText = 'Text example';
-    render(<ProductCard cardFooterText={expectedText} />, { wrapper: MemoryRouter });
+    render(<ProductCard cardFooterText={expectedText} />, {
+      wrapper: MemoryRouter,
+    });
     const cardFooterTextElement = screen.getByTestId('card-footer');
     expect(cardFooterTextElement).toHaveTextContent(expectedText);
   });
@@ -72,7 +80,8 @@ describe('should render ProductCard', () => {
         buttonLabel={expectedTextButtonLabel}
         cardFooterText={expectedTextCardFooter}
         buttonLink={expectedButtonLink}
-      />, { wrapper: MemoryRouter }
+      />,
+      { wrapper: MemoryRouter },
     );
     const cardImageElement = screen.getByTestId('cardImg');
     expect(cardImageElement).toHaveAttribute('src', expectedImage);
@@ -92,9 +101,6 @@ describe('should render ProductCard', () => {
     const cardFooterTextElement = screen.getByTestId('card-footer');
     expect(cardFooterTextElement).toHaveTextContent(expectedTextCardFooter);
     const cardLinkElement = screen.getByTestId('card-link');
-    expect(cardLinkElement).toHaveAttribute(
-                                 'href',
-                                 expectedButtonLink,
-                               );
+    expect(cardLinkElement).toHaveAttribute('href', expectedButtonLink);
   });
 });

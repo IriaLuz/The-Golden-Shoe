@@ -11,7 +11,7 @@ const ProductCard = ({
   buttonStyling,
   buttonLabel,
   cardFooterText,
-  buttonLink="/not-found",
+  buttonLink = '/not-found',
 }) => {
   return (
     <Card>

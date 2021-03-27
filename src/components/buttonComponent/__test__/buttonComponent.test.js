@@ -18,12 +18,12 @@ describe('ButtonComponent render', () => {
     expect(button).toHaveTextContent(content);
   });
 
-    it('should render with subcontent= "Test SubContent"', () => {
-      const subContent = 'Test SubContent';
-      render(<ButtonComponent subContent={subContent} />);
-      const button = screen.getByTestId('button');
-      expect(button).toHaveTextContent(subContent);
-    });
+  it('should render with subcontent= "Test SubContent"', () => {
+    const subContent = 'Test SubContent';
+    render(<ButtonComponent subContent={subContent} />);
+    const button = screen.getByTestId('button');
+    expect(button).toHaveTextContent(subContent);
+  });
 
   it('should render with variant="secondary"', () => {
     const variant = 'danger';
