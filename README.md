@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 `npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
+#####note: this is already using the backend that is deployed in Heroku 'https://the-golden-shoe-iria-luz.herokuapp.com/api/products'
 ## Testing
 
 ### `npm test`
